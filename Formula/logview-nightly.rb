@@ -9,7 +9,7 @@ class LogviewNightly < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Miragefl/logview/releases/download/nightly/logview-darwin_amd64.tar.gz"
-      sha256 "d15f61d32d59ba2153a7a5c355d5d8fed48b057954e0031cf2c6adbb61b0be5b"
+      sha256 "81edca878b4f79e8a7772f4bc07dc467dd8524ef90747bfca24f946b9459cf6b"
 
       define_method(:install) do
         bin.install "logview-darwin_amd64" => "logview"
@@ -17,7 +17,7 @@ class LogviewNightly < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Miragefl/logview/releases/download/nightly/logview-darwin_arm64.tar.gz"
-      sha256 "f816423094b69055e0f590f989281428ffc6294eb83ab12eabd9bc95468bcff4"
+      sha256 "8390e4b12336af0bf20aa018bf5849f589c106445b509f2f9e193eec2d6f7b1d"
 
       define_method(:install) do
         bin.install "logview-darwin_arm64" => "logview"
@@ -28,14 +28,14 @@ class LogviewNightly < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Miragefl/logview/releases/download/nightly/logview-linux_amd64.tar.gz"
-      sha256 "1e5a2c7c8b7cf877f352d544e9b96227be23a5c2a7c9a1ac10cd45bf27693164"
+      sha256 "80f4979ecd72c1088ec72efba5b3f5ee98da4614113d93407f00fb80d5f220d6"
       define_method(:install) do
         bin.install "logview-linux_amd64" => "logview"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Miragefl/logview/releases/download/nightly/logview-linux_arm64.tar.gz"
-      sha256 "acc0a02f6d217c7fceb2eeb9233da4fef8335b6532e91ee0f311c13debed1371"
+      sha256 "15eedf5feb923cff4eb2d3782e783a041e5909f3de51fd13fe0944c75d966e68"
       define_method(:install) do
         bin.install "logview-linux_arm64" => "logview"
       end
