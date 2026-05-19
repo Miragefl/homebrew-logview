@@ -9,18 +9,18 @@ class LogviewNightly < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Miragefl/logview/releases/download/nightly/logview-darwin_amd64.tar.gz"
-      sha256 "2966181e61e6b9542d40c022340291972e57ad5cffaee086cebf6436498587f4"
+      sha256 "01d779a3a52ecf68c66f34cba9e2bb7d9ce03ba005cc43042d642e0306ddf134"
 
       define_method(:install) do
-        bin.install "logview-darwin_amd64" => "logview"
+        bin.install "logview-darwin_amd64" => "logview-nightly"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/Miragefl/logview/releases/download/nightly/logview-darwin_arm64.tar.gz"
-      sha256 "bd2072a8a1b7e5c6eca2da007711f04e2a5681ae28ee921d7aa41b5d623bc091"
+      sha256 "c9f47a71e8ebecc8dce237393440da61b2eea1ac67bf3272941885601b93d98d"
 
       define_method(:install) do
-        bin.install "logview-darwin_arm64" => "logview"
+        bin.install "logview-darwin_arm64" => "logview-nightly"
       end
     end
   end
@@ -28,16 +28,16 @@ class LogviewNightly < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Miragefl/logview/releases/download/nightly/logview-linux_amd64.tar.gz"
-      sha256 "2edf93147b57cde96f840e1e8bc8a65e1d23649cb51edd4c0366e4bdf64e596f"
+      sha256 "67f65adb73c4ffd2f73ddc649e9a9561652aba96d43633f2bbcab89ae53a295b"
       define_method(:install) do
-        bin.install "logview-linux_amd64" => "logview"
+        bin.install "logview-linux_amd64" => "logview-nightly"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Miragefl/logview/releases/download/nightly/logview-linux_arm64.tar.gz"
-      sha256 "32457d1034ee60052a2323c54cd8952f91f37299bff6ce667ce76a4fbb1a7077"
+      sha256 "f8ad1033be28a982ed9c1049cd71f246e73300f2f59d4739e1f11d2060bebb67"
       define_method(:install) do
-        bin.install "logview-linux_arm64" => "logview"
+        bin.install "logview-linux_arm64" => "logview-nightly"
       end
     end
   end
