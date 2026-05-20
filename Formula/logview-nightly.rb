@@ -4,12 +4,12 @@
 class LogviewNightly < Formula
   desc "Terminal log viewer (nightly build)"
   homepage "https://github.com/Miragefl/logview"
-  version "0.10.0-nightly-20260520-063917"
+  version "0.11.0-nightly-20260520-072714"
 
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Miragefl/logview/releases/download/nightly/logview-darwin_amd64.tar.gz"
-      sha256 "97bcb263afd090d4b83e691732eeab3cbed7545c479ae03cefa231deb30ee4eb"
+      sha256 "7b87377ca684b8a52b1f370a2c105be56e6d7356a301627e782682a4fb23df5a"
 
       define_method(:install) do
         bin.install "logview-darwin_amd64" => "logview"
@@ -17,7 +17,7 @@ class LogviewNightly < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Miragefl/logview/releases/download/nightly/logview-darwin_arm64.tar.gz"
-      sha256 "e95bb1ade02712527a44b3b3e3e99c09bb31ebb1f7e644a31a896afe8332da16"
+      sha256 "336e4c43a6bc525437f661aabeff9184b0fd8d9d0af648ba631aafd60d172fd6"
 
       define_method(:install) do
         bin.install "logview-darwin_arm64" => "logview"
@@ -28,14 +28,14 @@ class LogviewNightly < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Miragefl/logview/releases/download/nightly/logview-linux_amd64.tar.gz"
-      sha256 "97c07aeaa9f1ab43ec552993671ee4e88e11b45ac37adf2463694335029348f3"
+      sha256 "f05cf52e36507a402d115873bb48d661984fb3fdd7d2b6d8f26727b2a5bdbd56"
       define_method(:install) do
         bin.install "logview-linux_amd64" => "logview"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Miragefl/logview/releases/download/nightly/logview-linux_arm64.tar.gz"
-      sha256 "406651c5071b20c752e1741491b9053293d6a179c8733a18fcdd7541f72d42e4"
+      sha256 "cd84d92cf0005bed59286a2b99412beaf02a516424141ea4a3574d009896d3d6"
       define_method(:install) do
         bin.install "logview-linux_arm64" => "logview"
       end
