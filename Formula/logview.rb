@@ -5,20 +5,20 @@
 class Logview < Formula
   desc "Terminal log viewer with real-time search and filtering"
   homepage "https://github.com/Miragefl/logview"
-  version "0.15.1"
+  version "0.15.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Miragefl/logview/releases/download/v0.15.1/logview_darwin_amd64.tar.gz"
-      sha256 "588c9686596c6904c4559376007f2187b9367b8d53517d203a91a0b156f0bf3f"
+      url "https://github.com/Miragefl/logview/releases/download/v0.15.2/logview_darwin_amd64.tar.gz"
+      sha256 "18ddb19da51b21cc10d208cbb4274da960e05122d9919c1897554dc0459dcfa4"
 
       define_method(:install) do
         bin.install "logview"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Miragefl/logview/releases/download/v0.15.1/logview_darwin_arm64.tar.gz"
-      sha256 "c64407f3b31678b426535402a1c74057e46805a60dab379f301dd765f384c2d9"
+      url "https://github.com/Miragefl/logview/releases/download/v0.15.2/logview_darwin_arm64.tar.gz"
+      sha256 "f94bc7baea9c4fea46e07594445f4ef5d86a33d1492b5ca47d22b8d1c6bd1379"
 
       define_method(:install) do
         bin.install "logview"
@@ -28,15 +28,15 @@ class Logview < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Miragefl/logview/releases/download/v0.15.1/logview_linux_amd64.tar.gz"
-      sha256 "071d8c4e7c45eebf65b23b38dde8f435858cbd71a052f50e3a339b6d45913023"
+      url "https://github.com/Miragefl/logview/releases/download/v0.15.2/logview_linux_amd64.tar.gz"
+      sha256 "4639eb0e72d5d504b3c3cffc58f66b112756edd7138e00faed81f18222de8d8c"
       define_method(:install) do
         bin.install "logview"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Miragefl/logview/releases/download/v0.15.1/logview_linux_arm64.tar.gz"
-      sha256 "3fe107d7d9524036c533800251e207a1274ac5ae9541d246f2583b97467460aa"
+      url "https://github.com/Miragefl/logview/releases/download/v0.15.2/logview_linux_arm64.tar.gz"
+      sha256 "f9fda2dfdb5d1fd999955619d40579df0d87a1ee0d8d370e4ff2a8b23c1f4b83"
       define_method(:install) do
         bin.install "logview"
       end
