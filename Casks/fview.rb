@@ -1,7 +1,7 @@
 cask "fview" do
-  version "0.23.0"
-  sha256 "8ac0b0eeddf4a125f692821e52686831989ef294dedc9bd0fd2e540e5e18837d"
-  url "https://github.com/Miragefl/logview/releases/download/v0.23.0/fview_0.23.0_macos_universal.tar.gz"
+  version "0.23.1"
+  sha256 "cf3ee85b7e6f7319875caf465338c94a536279aad2c1e40b6bb903d85b1378d2"
+  url "https://github.com/Miragefl/logview/releases/download/v0.23.1/fview_0.23.1_macos_universal.tar.gz"
   name "fview"
   desc "LogView desktop - terminal-style log viewer with tabs and GUI"
   homepage "https://github.com/Miragefl/logview"
